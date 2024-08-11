@@ -1,0 +1,86 @@
+/* Dropdown Menu */
+
+
+.dropdown-links {
+    position: absolute;
+    z-index: 1;
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+    z-index: -100;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.nested-list {
+    list-style: none;
+    padding: 10px;
+}
+
+
+.nested-list li a {
+    color: rgb(78, 78, 78);
+    font-size: 15px;
+}
+
+.nested-list li {
+    transition: transform 0.4s ease-in-out;
+}
+
+.nested-list li:hover{
+    transform: translateY(-1px);
+}
+
+.nested-list a:hover {
+    color: rgb(0, 0, 56);
+}
+
+.list-container {
+    width: 47rem;
+    height: fit-content;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    display: flex;
+}
+
+
+.dropdown-links li {
+    color: black;
+    padding: 10px;
+    
+}
+
+.dropdown-links {
+    transition: opacity .3s ease-in-out;
+}
+
+
+.chess-boards {
+    background-color: #e4e4e4;
+    height: 100%;
+}
+
+/* Box Backgrounds */
+.box-1 {
+    background: url('https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/Mick/phpF5EWR8.jpeg') center center / cover no-repeat;
+}
+.box-2 {
+    background: url('https://static01.nyt.com/images/2018/12/09/fashion/encounters-3/merlin_145050579_6e7c1203-0668-4b62-9584-c87a0dcc5383-articleLarge.jpg?quality=75&auto=webp&disable=upscale') center center / cover no-repeat;
+}
+.box-3 {
+    background: url('https://www.rd.com/wp-content/uploads/2021/03/GettyImages-81714911-e1616766173339.jpg') center center / cover no-repeat;
+}
+.box-4 {
+    background: url('https://www.inquirer.com/resizer/YpiJ8kDqvxx9_4XMwE4sY0fQPO8=/arc-anglerfish-arc2-prod-pmn/public/IN7JWLQ3GNHHBJ7LMWS5TJPGME.jpg') center center / cover no-repeat;
+}
+.box-5 {
+    background: url('https://epe.brightspotcdn.com/99/4f/7f99594241ddbdd930517a326b18/042423-detroit-chess-club-06-ee-bs.jpg') center center / cover no-repeat;
+}
+.box-6 {
+    background: url('https://ca-times.brightspotcdn.com/dims4/default/1a01004/2147483647/strip/true/crop/3498x2331+0+0/resize/2000x1333!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F88%2F1b%2Ff34674a146d9b4cd961a0888df68%2F1430701-hotspot-la-singles-late-night-chess-club-08.jpg') center center / cover no-repeat;
+}
+

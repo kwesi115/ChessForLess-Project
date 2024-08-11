@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2); /* Add some opacity if needed */
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.links {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.links li i {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.links li {
+    border-radius: 10px;
+}
+
+.links .items {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.links .items:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.items {
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.info-and-links ul {
+    display: flex;
+    list-style: none;
+
+}
+
+.info-and-links li {
+    padding: 10px;
+}
+
+.right-container {
+    text-align: center;
+}
+
+.right-container input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 10px;
+    width: 15rem
+}
+
+/* Login CSS */
+
+
+
+/* Hero */
+
+#hero-text {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:85px;
+    position: absolute; /* Positioning over the swiper-slide */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.promotional {
+    text-align: center;
+}
+
+.promo-text h1{
+    font-size: 5rem;
+    box-sizing: border-box;
+}
+
+.promotional button {
+    width: 150px;
+    height: 75px;
+    border: none;
+    color: white;
+    background: #111111;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    margin: 30px;
+}
+
+.promotional button:hover{
+    background-color: #2b2b2b;
+    cursor: pointer;
+}
+
+
+/* Products */
+
+#products {
+    color:#111111;
+    margin-top: 75px;
+}
+
+.product-img {
+    width: 420px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.product {
+    background-color: #e9e9e9;
+    width: 420px;
+    height: fit-content;
+    border-radius: 20px;
+    margin: 40px;
+    color: black;
+}
+
+
+.product:hover {
+    cursor: pointer;
+}
+
+.rating-btn:hover {
+    cursor: pointer;
+    background-color: #666666;
+}
+
+.product-description {
+    padding: 10px;
+}
+
+.product-description button{
+    margin: 15px 0 15px 0;
+    padding: 5px;
+    border: none;
+    background-color: #7e7e7e;
+    color: white;
+    border-radius: 5px;
+}
+
+.top-picks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* For You */
+
+.container {
+    position: relative;
+    width: 420px;
+    height: 320px;
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden; 
+}
+
+.box {
+    width: 420px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2; /* Ensures the overlay is above the box */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.box h2 {
+    padding: 10px;
+    font-size: 40px;
+}
+
+.box p, h2 {
+    z-index: 1000;
+}
+
+.container:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+
+.overlay {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.container:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.btn-box {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255, 0.89);
+    border: none;
+    border-radius: 20px;
+    z-index: 3;
+    position: relative;
+    opacity: 0; /* Start with invisible */
+    visibility: hidden; /* Start with hidden */
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out; /* Animate opacity */
+}
+
+.container:hover .btn-box{
+    opacity: 1; /* Make it visible */
+    visibility: visible; /* Make it visible */
+    cursor: pointer;
+}
+
+.for-you-row-1, .for-you-row-2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.for-you-row-1 {
+    margin-top: 35px;
+}
+
+.box-heading {
+    font-size: 45px;
+    margin-left: 245px;
+    color: black;
+}
+
+/* Testimonials */
+
+#testimonials {
+    background: url('https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fi%2F98vcxch3qysm674tcnyq.jpeg') center center / cover no-repeat;
+    width: 90vw;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+    margin: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.t-box p{
+    z-index: 1000000;
+}
+
+.t-box {
+    position: relative; /* This ensures that the z-index of children will work */
+    z-index: 3; /* Ensures testimonial boxes are above the overlay */
+    background-color: rgba(43, 43, 43, 0.5);
+    max-width: 450px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex: 0 0 calc(33.333% - 20px); /* Fixed width for each box */
+}
+
+.testimonial-boxes img {
+    border-radius: 50px;
+}
+
+.test-heading {
+    z-index: 200;
+    position: relative;
+    padding: 30px;
+}
+
+.testimonial-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.test-heading {
+    font-size: 50px;
+}
+
+.drag-line {
+    width: 60rem;
+    height: 1px;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    margin: 60px;
+    transition: height 0.2s ease-in-out;
+}
+
+.menu-nav {
+    align-self: center;
+    position: relative;
+    z-index: 10000;
+    box-sizing: border-box;
+}
+
+
+/* Footer */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 0 20px;
+    position: relative;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-section p, .footer-section ul, .footer-section form {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section ul li i {
+    margin-right: 10px;
+}
+
+.footer-section .socials a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.footer-section .socials a:hover {
+    color: #bbb;
+}
+
+.footer-section form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-section form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.footer-section form button {
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-section form button:hover {
+    background: #444;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+
+/* Responsive Design */
+
+/* For tablets and larger devices */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .links {
+        display: none; /* Hide links by default */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+        padding: 10px;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        color: white;
+    }
+
+    .hamburger.active + .links {
+        display: flex; /* Show links when hamburger is active */
+        flex-direction: column; /* Stack links */
+        width: 100%; /* Full width */
+    }
+
+    .product {
+        width: 90%; /* Make boxes responsive */
+        margin: 20px auto; /* Center boxes */
+    }
+
+    .product-img {
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .btn-box {
+        width: 30px; /* Smaller buttons for mobile */
+        height: 30px;
+    }
+
+    .box-heading {
+        font-size: 36px; /* Smaller heading */
+        margin-left: 0; /* Center headings */
+    }
+
+    #hero-text h1 {
+        font-size: 3rem; /* Adjust hero text size */
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .links .items {
+        font-size: 18px;
+    }
+
+    .promo-text h1 {
+        font-size: 4rem;
+    }
+
+    .product {
+        width: 350px;
+    }
+
+    .container, .box {
+        width: 350px;
+        height: 270px;
+    }
+
+    .product-img {
+        width: 350px;
+        height: 270px;
+    }
+
+    .footer-section {
+        min-width: 200px;
+    }
+
+    .top-picks {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* For small devices and mobile phones */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .items {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .promo-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .promotional button {
+        width: 120px;
+        height: 60px;
+        font-size: 18px;
+        margin: 20px;
+    }
+
+    .product {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .container, .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .for-you-row-1, .for-you-row-2, .testimonial-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .t-box {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .drag-line {
+        width: 80%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .footer-section form input[type="email"] {
+        padding: 8px;
+    }
+
+    .footer-section form button {
+        padding: 8px;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .promo-text h1 {
+        font-size: 2rem;
+    }
+
+    .promotional button {
+        width: 100px;
+        height: 50px;
+        font-size: 16px;
+        margin: 15px;
+    }
+
+    .product {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .top-picks {
+        flex-direction: column;
+    }
+
+    .container, .box {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .t-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .drag-line {
+        width: 90%;
+    }
+
+    .footer-section h2 {
+        font-size: 1rem;
+    }
+
+    .footer-section form input[type="email"] {
+        padding: 8px;
+    }
+
+    .footer-section form button {
+        padding: 8px;
+    }
+
+    
+}
+
+
+
+
+
